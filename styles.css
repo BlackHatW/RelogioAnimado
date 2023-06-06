@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.clock {
+  width: 500px;
+  height: 500px;
+  background-color: black ;
+  border-radius: 50%;
+  border: 2px solid goldenrod;
+  position: relative;
+  box-shadow: 1px 1px 10px 10px  goldenrod;
+}
+
+.clock .number {
+  --rotation: 0;
+  color: white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(var(--rotation));
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 15px;
+}
+
+.clock .number.number-1 {
+  --rotation: 30deg;
+  text-shadow: 1px 1px 10px goldenrod; 
+}
+.clock .number.number-2 {
+  --rotation: 60deg;
+  text-shadow: 1px 1px 10px goldenrod; 
+}
+.clock .number.number-3 {
+  --rotation: 90deg;
+  color: goldenrod;
+  text-shadow: 1px 1px 10px goldenrod; 
+}
+.clock .number.number-4 {
+  --rotation: 120deg;
+  text-shadow: 1px 1px 10px goldenrod; 
+}
+.clock .number.number-5 {
+  --rotation: 150deg;
+  text-shadow: 1px 1px 10px goldenrod; 
+}
+.clock .number.number-6 {
+  --rotation: 180deg;
+  color: goldenrod;
+  text-shadow: 1px 1px 10px goldenrod; 
+  
+}
+.clock .number.number-7 {
+  --rotation: 210deg;
+  text-shadow: 1px 1px 10px goldenrod; 
+}
+.clock .number.number-8 {
+  --rotation: 240deg;
+  text-shadow: 1px 1px 10px goldenrod; 
+}
+.clock .number.number-9 {
+  --rotation: 270deg;
+  color: goldenrod;
+  text-shadow: 1px 1px 10px goldenrod; 
+}
+.clock .number.number-10 {
+  --rotation: 300deg;
+  text-shadow: 1px 1px 10px goldenrod; 
+}
+.clock .number.number-11 {
+  --rotation: 330deg;
+  text-shadow: 1px 1px 10px goldenrod; 
+}
+.number.number-12 {
+   color: goldenrod;
+   text-shadow: 1px 1px 10px goldenrod; 
+   
+}
+
+
+/* Ponteiros */
+.clock::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  z-index: 11;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  box-shadow: 1px 1px 5px 5px  goldenrod;
+}
+
+.clock .hand {
+  --rotation: 0;
+
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  background-color: goldenrod;
+  z-index: 10;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  transform-origin: bottom;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.clock .hand.seconds {
+  width: 3px;
+  height: 40%;
+  background-color: white ;
+  box-shadow: 1px 1px 5px 5px  goldenrod;
+}
+
+.clock .hand.minutes {
+  width: 7px;
+  height: 35%;
+  background-color: white;
+  box-shadow: 1px 1px 5px 5px  goldenrod;
+}
+
+.clock .hand.hours {
+  width: 10px;
+  height: 25%;
+  background-color: white;
+  box-shadow: 1px 1px 5px 5px  goldenrod;
+}
+
+footer{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  color: white;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: x-large;
+  text-shadow: 1px 1px 10px goldenrod; 
+}
+
+a,img{
+  width: 100px;
+  height: 60px;
+  margin-left: 2%;
+  border-radius: 8px;
+}
